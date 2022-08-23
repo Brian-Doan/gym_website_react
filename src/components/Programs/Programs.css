@@ -1,0 +1,88 @@
+.programs {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.programs-header {
+  display: flex;
+  gap: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.program-categories {
+  display: flex;
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  background-color: var(--gray);
+  padding: 2rem;
+  color: #fff;
+}
+
+.category > :nth-child(1) {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+.category > :nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.category > :nth-child(3) {
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.join-btn > img {
+  width: 1rem;
+}
+
+.category:hover {
+  background: var(--planCard);
+  cursor: pointer;
+  animation: cardHover 0.3s ease-in forwards;
+}
+
+@keyframes cardHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .programs-header {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .program-categories {
+    flex-direction: column;
+  }
+}
